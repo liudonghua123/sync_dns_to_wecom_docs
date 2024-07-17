@@ -1,0 +1,21 @@
+diff --git a/dist/client.mjs b/dist/client.mjs
+index 58389b528289a23839631b9fe7181df2fc2be8a0..3f95183213e66b4468fb14f925e57ac1b11b6b7b 100644
+--- a/dist/client.mjs
++++ b/dist/client.mjs
+@@ -1,5 +1,5 @@
+-import { FormData, File, fetch } from 'node-fetch-native-with-agent';
+-import { createAgent } from 'node-fetch-native-with-agent/agent';
++// import { FormData, File, fetch } from 'node-fetch-native-with-agent';
++// import { createAgent } from 'node-fetch-native-with-agent/agent';
+ export { Query } from './query.mjs';
+ 
+ // src/client.ts
+@@ -182,7 +182,7 @@ var _Client = class _Client {
+     let options = {
+       method,
+       headers,
+-      ...createAgent(this.config.endpoint, { rejectUnauthorized: !this.config.selfSigned })
++      // ...createAgent(this.config.endpoint, { rejectUnauthorized: !this.config.selfSigned })
+     };
+     if (method === "GET") {
+       for (const [key, value] of Object.entries(_Client.flatten(params))) {
